@@ -3,7 +3,6 @@ deployments:
   5g-campus:
     release: 0.0.1
     env: dev
-    serviceAccountName: m2m-sa
     nsd_name: ping_pong_k8s_nsd
     nsd_version: 1.0
     values_version: 1.1.4
@@ -11,7 +10,7 @@ deployments:
     helm_repository:
       create: false
       name: brajappa-helm
-      namespace: fluxsystem
+      namespace: flux-system
     clusters:
       k8s-oidc:
         state: active
@@ -25,7 +24,6 @@ deployments:
             name: pong
             namespace: default
             custom_values: https://github.com/balaji42/planning.git/dso-campus-poc/pong/values.yaml
-            custom_config: https://gitlab.devops.telekom.de/mobile-core/5gc/mavenir-5gc/clusters/reference/t5g-campus-1.refaz.bn/-/tree/main/mavenir/cc/smf/config
         paas:
           nginx:
             custom_values: https://gitlab.devops.telekom.de/mobile-core/5gc/mavenir-5gc/clusters/reference/t5g-campus-1.refaz.bn/-/blob/main/paas/nginx/values.yaml
