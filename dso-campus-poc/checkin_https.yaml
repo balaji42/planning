@@ -14,16 +14,16 @@ deployments:
     clusters:
       k8s-oidc:
         state: active
-        global_values: git@github.com:balaji42/planning.git/dso-campus-poc/values.yaml
+        global_values: https://github.com/balaji42/planning.git/dso-campus-poc/values.yaml
         cnfs:
           ping:
             name: ping
             namespace: default
-            custom_values: git@github.com:balaji42/planning.git/dso-campus-poc/ping/values.yaml
+            custom_values: https://github.com/balaji42/planning.git/dso-campus-poc/ping/values.yaml
           pong:
             name: pong
             namespace: default
-            custom_values: git@github.com:balaji42/planning.git/dso-campus-poc/pong/values.yaml
+            custom_values: https://github.com/balaji42/planning.git/dso-campus-poc/pong/values.yaml
         paas:
           nginx:
             custom_values: https://gitlab.devops.telekom.de/mobile-core/5gc/mavenir-5gc/clusters/reference/t5g-campus-1.refaz.bn/-/blob/main/paas/nginx/values.yaml
