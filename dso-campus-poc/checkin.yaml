@@ -13,7 +13,7 @@ deployments:
       name: mavenir
       namespace: default
     clusters:
-      bm6:
+      k8s-oidc:
         state: active
         global_values: https://github.com/balaji42/planning.git/dso-campus-poc/values.yaml
         cnfs:
