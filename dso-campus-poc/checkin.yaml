@@ -10,8 +10,8 @@ deployments:
     template: default
     helm_repository:
       create: false
-      name: mavenir
-      namespace: default
+      name: brajappa-helm
+      namespace: fluxsystem
     clusters:
       k8s-oidc:
         state: active
